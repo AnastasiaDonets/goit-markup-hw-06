@@ -488,6 +488,7 @@ img {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
@@ -527,7 +528,6 @@ img {
 .contact {
   display: block;
   font-style: normal;
-  margin-top: 60px;
 
   transition: color var(--animation);
 }
@@ -547,15 +547,11 @@ img {
 }
 
 /* Socials */
-.contacts {
-margin-top: 72px;
-}
 
 .contacts-container {
   display: flex;
-  gap: 70px;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: baseline;
   
 }
 
@@ -598,13 +594,15 @@ margin-top: 72px;
 /* Subscribe */
 
 .subscribe {
-  display: flex;
+  /* display: flex;
   gap: 12px;
   justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 72px;
+  align-items: flex-end; */
+}
 
-  min-width: 570px;
+.subscribe-field {
+  display: flex;
+  gap: 12px;
 }
 
 .subscribe-title {
@@ -637,6 +635,8 @@ margin-top: 72px;
   gap: 10px;
   justify-content: center;
   align-items: center;
+  width: 200px;
+  height: 50px;
 }
 
 /* --------------
@@ -781,6 +781,7 @@ margin-top: 72px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
   width: 528px;
   height: 581px;
@@ -816,9 +817,6 @@ margin-top: 72px;
   margin-right: auto;
 }
 
-.register-form {
-  padding: 40px 39px 40px 41px;
-}
 
 .register-form-title {
   display: block;
@@ -838,9 +836,13 @@ margin-top: 72px;
 }
 
 .form {
-  position: relative;
   display: block;
   margin-bottom: 10px;
+}
+
+.form-input {
+  position: relative;
+  display: block;
 }
 
 .form-title {
@@ -860,24 +862,26 @@ margin-top: 72px;
   border-radius: 4px;
   padding-left: 42px;
   padding-right: 42px;
-  outline: transparent;
+  outline: none;
 
   transition: border-color var(--animation);
 }
 
+.form-field:hover,
 .form-field:focus {
   border-color: var(--accent-background-color);
 }
 
 .form-icon {
   position: absolute;
-  top: 50%;
+  top: 11px;
   left: 15px;
   bottom: 11px;
 
   transition: fill var(--animation);
 }
 
+.form-field:hover + .form-icon,
 .form-field:focus + .form-icon {
   fill: var(--accent-background-color);
 }
@@ -928,13 +932,17 @@ margin-top: 72px;
   transition: opacity var(--animation);
 }
 
+.checkbox-field:focus + .form-icons .icon-checked,
 .checkbox-field:checked + .form-icons .icon-checked {
   opacity: 1;
 }
 
+.checkbox-field:focus + .form-icons .icon-unchecked,
 .checkbox-field:checked + .form-icons .icon-unchecked {
   opacity: 0;
 }
+
+
 
 .checkbox-text {
   font-weight: 400;
